@@ -1,0 +1,284 @@
+<div id="lp-modal" class="modal-backdrop">
+  <div class="modal-container">
+    <button type="button" class="modal-close" id="modal-close-btn">×</button>
+    
+    <div class="modal-header">
+      <h3>Start Your Project</h3>
+      <p>Fill out the form below to receive a free quote and consultation within 24 hours.</p>
+    </div>
+    
+    <form id="modal-contact-form" class="modal-form" action="/sendmail.php" method="post">
+      <div class="modal-field">
+        <input type="text" id="modal-name" placeholder="Your Name" required="" aria-required="true" name="full_name">
+      </div>
+      
+      <div class="modal-field">
+        <input type="email" id="modal-email" placeholder="Your Email Address" required="" aria-required="true" name="email">
+      </div>
+      
+      <div class="modal-field">
+        <input type="tel" id="modal-phone" class="phoneNum" placeholder="Your Phone Number" required="" aria-required="true" inputmode="tel" name="phone">
+      </div>
+      
+      <div class="modal-field">
+        <textarea id="modal-message" placeholder="Tell us about your book project (genre, word count, timeline)..." rows="4" name="message"></textarea>
+      </div>
+      
+      <div class="modal-consent">
+        <label class="modal-checkbox-label">
+          <input type="checkbox" id="modal-sms-consent" required="" aria-required="true" name="sms_consent">
+          <span>
+            Please CHECK THE BOX to COMMUNICATE VIA SMS OR EMAIL 
+            (Privacy &amp; Policy &amp; Terms &amp; Conditions) 
+            - Carrier charges may apply for SMS. Reply STOP or UNSUBSCRIBE to STOP to unsubscribe anytime.
+          </span>
+        </label>
+      </div>
+      
+      <button type="submit" class="modal-submit-btn">Submit</button>
+    </form>
+
+    <!-- Success Message Container -->
+    <div id="modal-success-msg" class="modal-success-box">
+      <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h4>Thank You!</h4>
+      <p>Your request has been successfully submitted. One of our publishing consultants will contact you shortly.</p>
+      <button type="button" class="btn btn-primary" id="modal-success-close">Close</button>
+    </div>
+  </div>
+</div>
+<style>
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.modal-backdrop.modal-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-container {
+  background: #ffffff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 540px;
+  padding: 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transform: translateY(30px);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-backdrop.modal-open .modal-container {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f1f5f9;
+  border: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #64748b;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  margin-bottom: 24px;
+}
+
+.modal-header h3 {
+  font-family: "Space Grotesk", "Playfair Display", "Fredoka", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.modal-header p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-field input, .modal-field textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.modal-field input:focus, .modal-field textarea:focus {
+  border-color: #2D9AB8;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(30, 167, 219, 0.12);
+}
+
+.modal-consent {
+  margin-top: 4px;
+}
+
+.modal-checkbox-label {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #64748b;
+  text-align: left;
+}
+
+.modal-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #2D9AB8;
+  cursor: pointer;
+}
+
+.modal-checkbox-label a {
+  color: #2D9AB8;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.modal-submit-btn {
+  background: #2D9AB8;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+  box-shadow: 0 4px 12px rgba(30, 167, 219, 0.2);
+  margin-top: 8px;
+}
+
+.modal-submit-btn:hover {
+  background: #167f9f;
+}
+
+/* Success box styles */
+.modal-success-box {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.modal-success-box.show {
+  display: flex;
+}
+
+.success-icon {
+  font-size: 48px;
+  color: #10b981;
+  margin-bottom: 16px;
+}
+
+.modal-success-box h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.modal-success-box p {
+  font-size: 14.5px;
+  color: #64748b;
+  margin-bottom: 24px;
+  max-width: 380px;
+}
+
+@media (max-width: 640px) {
+  .modal-container {
+    padding: 30px 20px;
+  }
+}
+</style>
+<style>
+    /* Phone input full width */
+.iti {
+    width: 100% !important;
+}
+
+/* Hide country flag */
+.iti__flag {
+    display: none !important;
+}
+
+/* Hide dropdown arrow */
+.iti__arrow {
+    display: none !important;
+}
+
+/* Hide dropdown menu */
+.iti__dropdown-content,
+.iti__country-list {
+    display: none !important;
+}
+
+/* Keep country dial code */
+.iti__selected-dial-code {
+    display: inline-block !important;
+    font-weight: 500;
+}
+
+/* Disable clicking country selection */
+.iti__selected-country {
+    pointer-events: none !important;
+    cursor: default !important;
+}
+
+/* Input */
+.iti input {
+    width: 100% !important;
+}
+</style>

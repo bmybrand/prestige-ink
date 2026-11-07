@@ -1,0 +1,252 @@
+{
+  "home": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {}
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html",
+      "section-06.html",
+      "section-07.html",
+      "section-08.html",
+      "section-09.html",
+      "section-10.html",
+      "section-11.html"
+    ]
+  },
+  "about-us": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html"
+    ]
+  },
+  "audiobook-production": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html",
+      "section-06.html",
+      "section-07.html",
+      "section-08.html",
+      "section-09.html",
+      "shared:start-project.html"
+    ]
+  },
+  "book-design": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html",
+      "section-06.html",
+      "section-07.html",
+      "section-08.html",
+      "section-09.html",
+      "section-10.html"
+    ]
+  },
+  "book-editing": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html",
+      "section-06.html",
+      "section-07.html",
+      "section-08.html",
+      "section-09.html",
+      "section-10.html"
+    ]
+  },
+  "book-marketing": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html",
+      "section-06.html",
+      "section-07.html",
+      "section-08.html"
+    ]
+  },
+  "book-publishing": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html",
+      "section-06.html",
+      "section-07.html",
+      "section-08.html",
+      "section-09.html",
+      "section-10.html"
+    ]
+  },
+  "book-writing": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html",
+      "section-06.html",
+      "section-07.html",
+      "section-08.html",
+      "section-09.html",
+      "shared:start-project.html"
+    ]
+  },
+  "children-book-publishing": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html",
+      "section-03.html",
+      "section-04.html",
+      "section-05.html",
+      "section-06.html",
+      "section-07.html",
+      "section-08.html",
+      "section-09.html",
+      "section-10.html"
+    ]
+  },
+  "contact-us": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html"
+    ]
+  },
+  "faq": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html",
+      "section-02.html"
+    ]
+  },
+  "privacypolicy": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html"
+    ]
+  },
+  "refundpolicy": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html"
+    ]
+  },
+  "termsofservice": {
+    "mainAttributes": {},
+    "wrapper": null,
+    "sections": [
+      "section-01.html"
+    ]
+  },
+  "optout": {
+    "mainAttributes": {},
+    "wrapper": {
+      "tag": "div",
+      "attributes": {
+        "class": "pt-28"
+      }
+    },
+    "sections": [
+      "section-01.html"
+    ]
+  }
+}
