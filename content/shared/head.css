@@ -113,6 +113,24 @@ iframe[src*="crisp"], iframe[src*="addscript"], #zentalk-container, .zentalk,
   object-fit: contain !important;
   object-position: center !important;
 }
+
+/* Keep the starry hero readable without hiding its artwork. */
+.hero-vertical-overlay {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(2, 8, 14, 0.74),
+    rgba(2, 8, 14, 0.38),
+    rgba(2, 8, 14, 0.82)
+  ) !important;
+}
+.hero-side-overlay {
+  background-image: linear-gradient(
+    to right,
+    rgba(2, 8, 14, 0.76),
+    rgba(2, 8, 14, 0.18) 62%,
+    transparent
+  ) !important;
+}
 .service-card-grid {
   display: grid;
   gap: 20px;
