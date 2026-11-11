@@ -12,8 +12,12 @@ function initializeMobileNavigation() {
     toggle.dataset.bound = 'true';
 
     const setMenuOpen = (isOpen) => {
-        panel.hidden = !isOpen;
         panel.classList.toggle('is-open', isOpen);
+        if (isOpen) {
+            panel.removeAttribute('hidden');
+        } else {
+            panel.setAttribute('hidden', '');
+        }
         header?.classList.toggle('mobile-nav-open', isOpen);
         document.body.classList.toggle('mobile-nav-locked', isOpen);
         toggle.setAttribute('aria-expanded', String(isOpen));
@@ -24,9 +28,13 @@ function initializeMobileNavigation() {
 
     const setServicesOpen = (isOpen) => {
         if (!servicesToggle || !servicesList) return;
-        servicesList.hidden = !isOpen;
         servicesList.classList.toggle('is-open', isOpen);
         servicesList.classList.toggle('hidden', !isOpen);
+        if (isOpen) {
+            servicesList.removeAttribute('hidden');
+        } else {
+            servicesList.setAttribute('hidden', '');
+        }
         servicesToggle.setAttribute('aria-expanded', String(isOpen));
         chevron?.classList.toggle('is-open', isOpen);
     };
@@ -61,7 +69,7 @@ function initializeMobileNavigation() {
     });
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth >= 1024 && toggle.getAttribute('aria-expanded') === 'true') {
+        if (window.innerWidth >= 976 && toggle.getAttribute('aria-expanded') === 'true') {
             setMenuOpen(false);
             setServicesOpen(false);
         }

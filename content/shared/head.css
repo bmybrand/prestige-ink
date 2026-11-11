@@ -92,44 +92,41 @@ iframe[src*="crisp"], iframe[src*="addscript"], #zentalk-container, .zentalk,
   min-height: 72px;
 }
 
-/* Mobile navigation */
+/* Mobile navigation — keep header fixed (do not switch to relative) */
 .mobile-menu-toggle {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
+.main_header.mobile-nav-open {
+  z-index: 1000;
+}
 .mobile-nav {
-  width: 100%;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.28s ease, opacity 0.2s ease;
-}
-.mobile-nav.is-open {
-  max-height: min(80vh, 720px);
-  opacity: 1;
-  overflow-y: auto;
-}
-.mobile-nav[hidden] {
   display: none !important;
+  width: 100%;
+  background: #f7f4ef;
+  border-top: 1px solid rgba(16, 36, 32, 0.1);
+  box-shadow: 0 18px 40px rgba(16, 36, 32, 0.18);
 }
+.mobile-nav.is-open,
 .mobile-nav.is-open[hidden] {
   display: block !important;
+  max-height: min(75vh, 640px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
-.main_header.mobile-nav-open {
-  position: relative;
-  z-index: 60;
+.mobile-nav-panel {
+  background: #f7f4ef;
 }
 body.mobile-nav-locked {
   overflow: hidden;
 }
-.mobile-services-list.is-open,
-.mobile-services-list.is-open[hidden] {
+.mobile-services-list.is-open {
   display: block !important;
 }
 .mobile-services-chevron.is-open {
   transform: rotate(180deg);
 }
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
   .mobile-nav,
   .mobile-menu-toggle {
     display: none !important;
