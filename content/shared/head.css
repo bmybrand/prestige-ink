@@ -91,6 +91,53 @@ iframe[src*="crisp"], iframe[src*="addscript"], #zentalk-container, .zentalk,
 .main_header > div.flex.max-w-\[1350px\] {
   min-height: 72px;
 }
+
+/* Mobile navigation */
+.mobile-menu-toggle {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-nav {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.28s ease, opacity 0.2s ease;
+}
+.mobile-nav.is-open {
+  max-height: min(80vh, 720px);
+  opacity: 1;
+  overflow-y: auto;
+}
+.mobile-nav[hidden] {
+  display: none !important;
+}
+.mobile-nav.is-open[hidden] {
+  display: block !important;
+}
+.main_header.mobile-nav-open {
+  position: relative;
+  z-index: 60;
+}
+body.mobile-nav-locked {
+  overflow: hidden;
+}
+.mobile-services-list.is-open,
+.mobile-services-list.is-open[hidden] {
+  display: block !important;
+}
+.mobile-services-chevron.is-open {
+  transform: rotate(180deg);
+}
+@media (min-width: 1024px) {
+  .mobile-nav,
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+  body.mobile-nav-locked {
+    overflow: auto;
+  }
+}
 .portfolio-book-cover {
   display: block;
   width: 100%;

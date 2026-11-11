@@ -5,6 +5,24 @@ import { SharedOverlays } from '@/components/layout/SharedOverlays';
 import { SiteClientInitializer } from '@/components/layout/SiteClientInitializer';
 import { readSharedStyles } from '@/lib/content';
 
+export const metadata = {
+  metadataBase: new URL('https://prestigeinkllc.com'),
+  title: {
+    default: 'Prestige Ink LLC | Book Writing, Publishing & Marketing',
+    template: '%s | Prestige Ink LLC',
+  },
+  description:
+    'Prestige Ink LLC helps authors with book writing, editing, design, publishing, marketing, and audiobook production.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://prestigeinkllc.com',
+    siteName: 'Prestige Ink LLC',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
